@@ -1,0 +1,18 @@
+//matches dna characters with their base pairs, returns as 2d array
+
+function pair(str) {
+  var arr = [];
+  for(var i = 0; i < str.length; i++){
+    var match;
+    switch(str.charAt(i)){
+      case 'A': match = 'T'; break;
+      case 'T': match = 'A'; break;
+      case 'C': match = 'G'; break;
+      case 'G': match = 'C'; break;
+    }
+    arr.push([str.charAt(i), match]);
+  }
+  return arr;
+}
+
+pair("GCG");

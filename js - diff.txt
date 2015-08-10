@@ -1,0 +1,32 @@
+//Compare two arrays and return a new array with any items not found in both of the original arrays.
+
+function diff(arr1, arr2) {
+  var newArr = [];
+  var match;
+  for(var i = 0; i < arr1.length; i++){
+    match = false;
+    for(var j = 0; j < arr2.length; j++){
+      if(arr1[i] === arr2[j]){
+        match = true;
+      }
+    }
+    if(match === false){
+      newArr.push(arr1[i]);
+    }
+  }
+  for(var h = 0; h < arr2.length; h++){
+    match = false;
+    for(var k = 0; k < arr1.length; k++){
+      if(arr2[h] === arr1[k]){
+        match = true;
+      }
+    }
+    if(match === false){
+      newArr.push(arr2[h]);
+    }
+  }
+  // Same, same; but different.
+  return newArr;
+}
+
+diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);

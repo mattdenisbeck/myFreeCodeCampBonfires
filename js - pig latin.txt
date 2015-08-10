@@ -1,0 +1,19 @@
+//translates str to pig latin
+
+function translate(str) {
+  var newStr = '';
+  var first = str.charAt(0);
+  var second = str.charAt(1);
+  if(first  === 'a' || first  === 'e' || first  === 'i' || first  === 'o' || first  === 'u'){
+    newStr = str + 'way';
+  }
+  else if(second  !== 'a' && second  !== 'e' && second  !== 'i' && second  !== 'o' && second  !== 'u'){
+    newStr = str.slice(2) + first + second + 'ay';
+  }
+  else{
+    newStr = str.slice(1) + first + 'ay';
+  }
+ return newStr;
+}
+
+translate("consonant");

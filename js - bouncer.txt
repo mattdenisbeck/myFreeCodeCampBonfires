@@ -1,0 +1,9 @@
+//filters out falsey values from array
+
+function bouncer(arr) {
+  var newArr = arr.filter(function(e) { return !!e; });
+  return newArr;
+}
+
+
+bouncer([7, 'ate', '', false, 9]);
