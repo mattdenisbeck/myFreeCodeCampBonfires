@@ -1,0 +1,9 @@
+//checks if argument is boolean primitive
+function boo(bool) {
+  if(typeof bool === "boolean"){
+   return true;
+  } 
+  return false;
+}
+
+boo(null);
