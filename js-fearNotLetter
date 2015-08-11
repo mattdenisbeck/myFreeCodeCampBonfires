@@ -1,0 +1,17 @@
+//finds the missing letter in a range and returns it
+
+function fearNotLetter(str) {
+  var start = str.charCodeAt(0);
+  var missing;
+  
+  for(var i = 0; i < str.length; i++){
+    if(str.charCodeAt(i) !== i + start) {
+       missing = i + start;
+      break;
+    }
+  }
+  
+  return missing ? String.fromCharCode(missing) : missing;
+}
+
+fearNotLetter('abcdefghjklmno');
